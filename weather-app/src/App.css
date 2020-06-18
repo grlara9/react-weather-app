@@ -1,0 +1,53 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  
+}
+body{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: #0F5474;
+  color:#ffffff;
+}
+
+form input[name="city"]{
+  color:black;
+  padding: 10px;
+  border: none;
+}
+.name{
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+}
+.weather-icon{
+  height: 40vh;
+  font-size: 25vh;
+  text-align: center;
+ 
+}
+.weather{
+  display:flex;
+  justify-content: space-around;
+  flex-direction: row;
+  
+}
+.main-weather{
+  font-size: 10vh;
+}
+.minmax{
+  font-size: 2.5vh;
+  display: flex;
+  align-items: center;
+}
+
+.condition{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size:2.4vh;
+  font-weight: bold;
+}
