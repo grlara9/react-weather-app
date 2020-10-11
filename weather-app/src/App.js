@@ -70,7 +70,7 @@ class App extends React.Component{
           lon: position.coords.longitude
         }
         this.setState({
-          coord: loc
+          coord: loc 
         })
         const api =`https://api.openweathermap.org/data/2.5/weather?lat=${this.state.coord.lat}&lon=${this.state.coord.lon}&appid=${api_key}`;
         axios.get(api)
