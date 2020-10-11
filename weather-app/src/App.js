@@ -113,7 +113,7 @@ class App extends React.Component{
   getWeather = (e) => {
     e.preventDefault();
 
-    const api=`http://api.openweathermap.org/data/2.5/weather?q=${this.state.location}&appid=${api_key}`;
+    const api=`https://api.openweathermap.org/data/2.5/weather?q=${this.state.location}&appid=${api_key}`;
     axios.get(api)
     .then(response=>{
    
