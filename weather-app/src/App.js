@@ -80,12 +80,11 @@ class App extends React.Component{
         .then(response => {
           console.log(response)
           let weather ={
-            city: response.data.name,
+            city: response.data.city.name,
+            country:response.data.city.country,
             
-            temperature: this.covertToFahrenheit(response.data.main.temp),
-            max: this.covertToFahrenheit(response.data.main.temp_max),
-            min:this.covertToFahrenheit(response.data.main.temp_min),
-            condition: response.data.weather[0].description
+           
+            
             }
           this.setState({
            data: weather
