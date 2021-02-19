@@ -6,7 +6,7 @@ const Weather =(props)=>{
             <div className="name">
         {props.weather.city},{props.weather.country}
     </div>
-    <div className="weather-icon">
+    <div className="weather-icon"> 
         <i className={`wi ${props.icon}`}/>
     </div>
     <div className="weather">

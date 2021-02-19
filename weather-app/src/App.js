@@ -6,7 +6,9 @@ import Form from './components/form-weather.component'
 import Weather from './components/display-weather.component'
 import axios from 'axios';
 
-const api_key="ce06c3f81e1990453b38833c502026cb";
+//const api_key="fd65dfc39c19c48cf92e9b8454d0686d";
+const api_key="fd65dfc39c19c48cf92e9b8454d0686d";
+
 
 class App extends React.Component{
   constructor(props){
@@ -72,13 +74,14 @@ class App extends React.Component{
         this.setState({
           coord: loc 
         })
-        const api =`https://api.openweathermap.org/data/2.5/weather?lat=${this.state.coord.lat}&lon=${this.state.coord.lon}&appid=${api_key}`;
+        //const api =`https://api.openweathermap.org/data/2.5/weather?lat=${this.state.coord.lat}&lon=${this.state.coord.lon}&appid=${api_key}`;
+        const api = `http://api.openweathermap.org/data/2.5/forecast?lat=35&lon=139&appid=${api_key}`
         axios.get(api)
         .then(response => {
           console.log(response)
           let weather ={
             city: response.data.name,
-            country:response.data.sys.country,
+            
             temperature: this.covertToFahrenheit(response.data.main.temp),
             max: this.covertToFahrenheit(response.data.main.temp_max),
             min:this.covertToFahrenheit(response.data.main.temp_min),
@@ -136,7 +139,7 @@ class App extends React.Component{
  })
    
 }
-
+ 
 
 
 render(){
